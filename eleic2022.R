@@ -16,7 +16,7 @@ table <- tibble::tribble(
   x$cand[[8]]$nm, x$cand[[8]]$vap, x$cand[[8]]$pvap,
   x$cand[[9]]$nm, x$cand[[9]]$vap, x$cand[[9]]$pvap,
   x$cand[[10]]$nm, x$cand[[10]]$vap, x$cand[[10]]$pvap,
-  x$cand[[11]]$nm, x$cand[[11]]$vap, x$cand[[11]]$pvap,) |>
+  x$cand[[11]]$nm, x$cand[[11]]$vap, x$cand[[11]]$pvap) |>
   dplyr::mutate(
     Candidato = gsub(pattern = "&apos;", replacement = "'", x = Candidato),
     VotosTotais = as.numeric(sub(",", ".", VotosTotais, fixed = TRUE)),
