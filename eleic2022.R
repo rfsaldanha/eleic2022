@@ -2,7 +2,7 @@ x <- httr2::request(base_url = "https://resultados.tse.jus.br/oficial/ele2022/54
   httr2::req_throttle(rate = 1) |>
   httr2::req_retry(max_tries = 10) |>
   httr2::req_perform() |>
-  httr2::resp_body_json()
+  httr2::resp_body_json(check_type = FALSE)
 
 table <- tibble::tribble(
   ~Candidato, ~VotosTotais, ~Percentual,
